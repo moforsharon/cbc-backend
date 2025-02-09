@@ -1,0 +1,157 @@
+openapi: 3.0.0
+info:
+  title: ShipGPT APIs
+  description: |
+    Welcome to the API Documentation for Chatwebby. This guide provides information on how to use the available endpoints and details about the Chatdox API functionality.
+  version: 0.0.23
+
+tags:
+  - name: Upload data sources
+    description: Endpoints related to Upload data sources.
+
+  - name: Chat with data sources
+    description: Endpoints related to Chat.
+
+settings:
+  - hideDownloadButton: true
+
+paths:
+  /folder:
+    post:
+      summary: Folder API
+      description: |
+        This API is designed for adding, updating and removing data sourceFiles to chatbot.
+
+        **How to Add Sources:**
+         To update files from the folder, provide the `sources` array with `source_type: new`.
+
+         **How to Update Sources:**
+         To update files from the folder, provide the `sources` array with `source_type: update`.
+
+         **How to Delete Sources:**
+         To delete files from the folder, provide the `sources` array with `source_type: delete`.
+
+      tags:
+        - Upload data sources
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                sourceFiles:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      file_id:
+                        type: string
+                      source_name:
+                        type: string
+                      question:
+                        type: string
+                      answer:
+                        type: string
+                      length:
+                        type: integer
+                      type:
+                        type: string
+                      source_type:
+                        type: string
+                      source_id:
+                        type: integer
+                  example:
+                    - file_id: "file_id_001.pdf"
+                      source_name: "001.pdf"
+                      question: ""
+                      answer: ""
+                      length: 1000
+                      type: "file"
+                      source_type: "new"
+                      source_id: 123456789
+                    - file_id: "youtube_file_id_001.txt"
+                      source_name: "youtube_001"
+                      question: ""
+                      answer: ""
+                      length: 2000
+                      type: "youtube"
+                      source_type: "new"
+                      source_id: 123456789
+                    - file_id: ""
+                      source_name: "https://example.com/"
+                      question: ""
+                      answer: ""
+                      length: 500
+                      type: "link"
+                      source_type: "new"
+                      source_id: 123456789
+                    - file_id: ""
+                      source_name: "text_string"
+                      question: ""
+                      answer: ""
+                      length: 300
+                      type: "text"
+                      source_type: "new"
+                      source_id: 123456789
+                    - file_id: ""
+                      source_name: "questions"
+                      question: "what this file is about?"
+                      answer: "This is a sample file"
+                      length: 45
+                      type: "question"
+                      source_type: "new"
+                      source_id: 123456789
+                textContent:
+                  type: string
+                  example: "text_content"
+                chatbot_id:
+                  type: string
+                  example: "chatbot_id"
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: object
+                    properties:
+                      chatbot_id:
+                        type: string
+                        example: "chatbot_id"
+                  error:
+                    type: string
+                  message:
+                    type: object
+                    properties:
+                      content:
+                        type: string
+                        example: "ingestion complete"
+                      displayContent:
+                        type: boolean
+                        example: true
+
+  /chat:
+    post:
+      summary: Chat API
+      description: This API is used to ask questions about a file. You can use the `chatbot_id` of uploaded chatbot to get answers.
+      tags:
+        - Chat with data sources
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                _id:
+                  type: string
+                  example: "chatbot_id"
+                question:
+                  type: string
+                  example: "Give me a summary of this?"
+      responses:
+        "200":
+          description: Returns an event stream

@@ -1,0 +1,12 @@
+user_id,email,password,status,createAt,db_name,loginType,plan_name,subscription_id,verified,subscription_date,subscription_type,stripe_cus_id,cancel_at,canceled_at,comment,feedback,current_period_start,current_period_end,sub_status,reason,language
+6535bb7de5d3294572789cee,natda002@gmail.com,---,active,10/23/2023 0:17,pinecone,google,free,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,English
+6535ca55e5d3294572789cf8,enzobottadalmas@gmail.com,---,active,10/23/2023 1:20,pinecone,google,free,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,English
+6535dedfe5d3294572789d02,nattadon.7220@gmail.com,---,active,10/23/2023 2:47,pinecone,google,free,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,English
+6535e302e5d3294572789d0c,wakeupdown61@gmail.com,---,active,10/23/2023 3:05,pinecone,google,free,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,English
+6535f500e5d3294572789d15,akaradate.s@kkumail.com,---,active,10/23/2023 4:22,pinecone,google,free,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,English
+6536125fe5d3294572789d1f,ch.nithisart@gmail.com,---,active,10/23/2023 6:27,pinecone,google,free,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,English
+65362889e5d3294572789d28,hong245639@gmail.com,---,active,10/23/2023 8:02,pinecone,google,free,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,English
+6536336fe5d3294572789d31,patsaya.puen@gmail.com,---,active,10/23/2023 8:48,pinecone,google,free,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,English
+65363eaae5d3294572789d3a,rdetthawisut@gmail.com,---,active,10/23/2023 9:36,pinecone,google,free,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,English
+653674c1e5d3294572789d62,mixzzmz20@gmail.com,---,active,10/23/2023 13:27,pinecone,google,free,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,English
+653680c7e5d3294572789d6e,sirichokp62@nu.ac.th,---,active,10/23/2023 14:18,pinecone,google,free,NULL,1,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,English

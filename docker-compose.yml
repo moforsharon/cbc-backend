@@ -1,0 +1,62 @@
+# version: '3'
+# services:
+#   app:
+#     build: .
+#     ports:
+#       - "30007:30007"
+#     environment:
+#       NEXT_PUBLIC_HOST: mysql
+#       NEXT_PUBLIC_USERNAME: root
+#       NEXT_PUBLIC_PASS: root
+#       NEXT_PUBLIC_DB: cbc
+#     depends_on:
+#       - mysql
+
+#   mysql:
+#     image: mariadb:10.11
+#     environment:
+#       MYSQL_ROOT_PASSWORD: root
+#       MYSQL_DATABASE: cbc
+#       MYSQL_ROOT_HOST: '%'
+#     volumes:
+#       - mysql-data:/var/lib/mysql:rw
+#     ports:
+#       - "3306:3306"
+
+# volumes:
+#   mysql-data:
+#     driver: local
+
+
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "30007:30007"
+    environment:
+      NEXT_PUBLIC_HOST: mysql
+      NEXT_PUBLIC_USERNAME: root
+      NEXT_PUBLIC_PASS: root
+      NEXT_PUBLIC_DB: cbc
+      # ENCRYPTION_KEY: your_secret_key_here
+      # EMAIL_PASSWORD: your_email_password_here
+    depends_on:
+      - mysql
+    restart: unless-stopped
+
+    
+
+  mysql:
+    image: mariadb:10.11
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: cbc
+      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - ./mysql-data:/var/lib/mysql:rw
+      - ./my.cnf:/etc/mysql/my.cnf
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "3306:3306"
+    restart: unless-stopped

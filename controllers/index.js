@@ -1,0 +1,10 @@
+module.exports.userController = require("./user-controller");
+module.exports.botController = require("./bot-contorller");
+module.exports.keyController = require("./key-controller");
+module.exports.chatHistoryController = require("./chatHistory-controller");
+module.exports.linkToFileController = require("./linkToFile-controller");
+module.exports.chatBotController = require("./createBot-controller");
+module.exports.chatmessageController = require("./chat-controller");
+module.exports.paymentController = require("./payment-controller");
+module.exports.scrapController = require("./scrapper-controller");
+module.exports.childController = require("./child-controller");

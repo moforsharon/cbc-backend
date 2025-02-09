@@ -1,0 +1,26 @@
+{
+  "jwtPrivateKey": "ticketScript_jwtPrivateKey",
+  "DATABASE": {
+    "PASSWORD": "cw_db_password",
+    "NAME": "cw_db_name",
+    "HOST": "cw_host_name",
+    "USER": "cw_user_name"
+  },
+  "STRIPE": {
+    "STRIPE_ID": "cw_stripe_secret_key"
+  },
+  "GOOGLECLIENTID": "google_client_id",
+  "AWS": {
+    "ACCESS_KEY_ID": "aws_access_key_id",
+    "REGION": "aws_region",
+    "SERCRET_ID": "aws_secret_access_key",
+    "BUCKET_NAME": "aws_bucket_name",
+    "DIR_NAME": "aws_dir_name"
+  },
+  "PINECONE": {
+    "API_KEY_PINECONE": "cw_API_KEY_PINECONE",
+    "ENVIRONMENT_PINECONE": "cw_ENVIRONMENT_PINECONE",
+    "INDEX_NAME_PINECONE": "cw_INDEX_NAME_PINECONE"
+  },
+  "API_KEY_OPENAI": "cw_API_KEY_OPENAI"
+}
